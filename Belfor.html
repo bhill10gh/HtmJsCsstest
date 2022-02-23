@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --white-block-width: 115px;
+            --white-block-height: 207px;
+            --white-circle-radius: 260px;
+            --black-circle-radius: 190px;
+            --white-block-top-left-top: -288px;
+            --white-block-top-left-left: 125px;
+            --white-block-top-right-top: -700px;
+            --white-block-top-right-left: 155px;
+            --white-block-bottom-left-top: -255px;
+            --white-block-bottom-left-left: 130px;
+            --white-block-bottom-right-top: -665px;
+            --white-block-bottom-right-left: 153px;
+            /* --white-block-color: aqua;   white */
+            --white-block-color: white;            
+        }
+        .outer-circle {
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            border-radius: 400px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        .white-circle {
+            /* background-color: var(--white-block-color); */
+            background-color: white;
+            width: var(--white-circle-radius);
+            height: var(--white-circle-radius);
+            border-radius: var(--white-circle-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 70px;
+            left: 70px;
+            position: relative;
+        }
+
+        .black-circle {
+            background-color: black;
+            width: var(--black-circle-radius);
+            height: var(--black-circle-radius);
+            border-radius: var(--black-circle-radius);
+            z-index: 500;
+        }
+
+        .white-block-top-left {
+            background-color: var(--white-block-color);
+            width: var(--white-block-width);
+            height: var(--white-block-height);
+            top: var(--white-block-top-left-top);
+            left:var(--white-block-top-left-left);
+            transform: rotate(-35deg);
+            position: relative;
+        }
+        .white-block-top-right {
+            background-color: var(--white-block-color);
+            width: var(--white-block-width);
+            height: var(--white-block-height);
+            top: var(--white-block-top-right-top);
+            left:var(--white-block-top-right-left);
+            transform: rotate(35deg);
+            position: relative;
+        }
+
+        .white-block-bottom-left {
+            background-color: var(--white-block-color);
+            width: var(--white-block-width);
+            height: var(--white-block-height);
+            top: var(--white-block-bottom-left-top);
+            left:var(--white-block-bottom-left-left);
+            transform: rotate(35deg);
+            position: relative;
+        }
+
+        .white-block-bottom-right {
+            background-color: var(--white-block-color);
+            width: var(--white-block-width);
+            height: var(--white-block-height);
+            top: var(--white-block-bottom-right-top);
+            left:var(--white-block-bottom-right-left);
+            transform: rotate(-35deg);
+            position: relative;
+        }
+
+        .vl {
+            /* border-left: 6px solid green; */
+            background-color: green;
+            width: 5px;
+            height: 400px;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            z-index: 500;
+        }
+
+        .hl {
+            border: 0;
+            height: 5px;
+            background: black;
+            position: absolute;
+            top: 200px;
+            width: 100%;
+            z-index: 500;
+        }
+
+        .outer-div {
+            /* background-color: var(--white-block-color); */
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-div">
+        <div>
+            <!-- <div class="vl"> </div>
+            <div class="hl"> </div>    -->
+            <div class="outer-circle">
+                <div class="white-circle">
+                    <div class="black-circle"></div>
+                </div>
+                <div class="white-block-top-left">
+                </div>
+                <div class="white-block-bottom-left">
+                </div>
+                <div class="white-block-top-right">
+                </div> 
+                <div class="white-block-bottom-right">
+                </div> 
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
